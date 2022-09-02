@@ -13,7 +13,7 @@ require('formatter').setup({
     },
     -- other formatters ...
     ruby = {
-      require("formatter.filetypes.ruby").stylua,
+      require("formatter.filetypes.ruby").rubocop,
     },
   }
 })
