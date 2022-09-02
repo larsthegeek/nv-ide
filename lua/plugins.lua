@@ -133,7 +133,7 @@ return require('packer').startup(function(use)
   use { 'stevearc/dressing.nvim', config = lua_path"dressing" }
 
   -- Tags
-  use { 'ludovicchabant/vim-gutentags', config = lua_path"vim-gutentags" }
+  --  use { 'ludovicchabant/vim-gutentags', config = lua_path"vim-gutentags" }
 
   -- Debugger
   use { 'mfussenegger/nvim-dap', config = lua_path"nvim-dap" }
