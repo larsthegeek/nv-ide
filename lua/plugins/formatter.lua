@@ -12,5 +12,8 @@ require('formatter').setup({
       end
     },
     -- other formatters ...
+    ruby = {
+      require("formatter.filetypes.ruby").stylua,
+    },
   }
 })
