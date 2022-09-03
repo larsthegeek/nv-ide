@@ -130,8 +130,9 @@ return require('packer').startup(function(use)
   use { 'christoomey/vim-tmux-navigator' }
 
   -- Colorschema
-  use { 'sainnhe/gruvbox-material' }
+  -- use { 'sainnhe/gruvbox-material' }
   use { 'stevearc/dressing.nvim', config = lua_path"dressing" }
+  use { "rebelot/kanagawa.nvim" }
 
   -- Tags
   -- use { 'ludovicchabant/vim-gutentags', config = lua_path"vim-gutentags" }
