@@ -98,3 +98,9 @@ vim.keymap.set("n", "<leader>dcc", "<cmd>lua require'telescope'.extensions.dap.c
 vim.keymap.set("n", "<leader>dlb", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints{}<CR>", {silent = true, noremap = true})
 vim.keymap.set("n", "<leader>dv", "<cmd>lua require'telescope'.extensions.dap.variables{}<CR>", {silent = true, noremap = true})
 vim.keymap.set("n", "<leader>df", "<cmd>lua require'telescope'.extensions.dap.frames{}<CR>", {silent = true, noremap = true})
+
+-- james stuff
+-- vim.keymap.set('i', '<C-a>', '<ESC>I', {noremap = true, silent = true})
+-- vim.keymap.set('n', '<C-a>', '<ESC>^', {noremap = true, silent = true})
+-- vim.keymap.set('i', '<C-e>', '<ESC>A', {noremap = true, silent = true})
+-- vim.keymap.set('n', '<C-e>', 'A', {noremap = true, silent = true})

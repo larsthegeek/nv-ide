@@ -14,10 +14,13 @@ local cmp = require'cmp'
 local lspkind = require'lspkind'
 
 cmp.setup({
-  snippet = {
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
-    end,
+  --snippet = {
+  --  expand = function(args)
+  --    vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
+  --  end,
+  --},
+  completion = {
+    autocomplete = false
   },
   mapping = {
     ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
