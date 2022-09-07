@@ -9,6 +9,9 @@ require'nvim-treesitter.configs'.setup {
     enable_autocmd = false,
   },
   matchup = {
-    enable = true  
+    enable = true
+  },
+  indent = {
+    enable = false
   }
 }
