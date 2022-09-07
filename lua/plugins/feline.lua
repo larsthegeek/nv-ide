@@ -321,105 +321,105 @@ components.inactive[1][1] = {
 -- LEFT
 
 -- nvimGps
-winbar_components.active[1][1] = {
-  provider = function() return gps.get_location() end,
-  enabled = function() return gps.is_available() end,
-  hl = {
-    fg = 'orange',
-    style = 'bold'
-  }
-}
-
+--[[ winbar_components.active[1][1] = { ]]
+--[[   provider = function() return gps.get_location() end, ]]
+--[[   enabled = function() return gps.is_available() end, ]]
+--[[   hl = { ]]
+--[[     fg = 'orange', ]]
+--[[     style = 'bold' ]]
+--[[   } ]]
+--[[ } ]]
+--[[]]
 -- MID
 
 -- RIGHT
 
 -- LspName
-winbar_components.active[3][1] = {
-  provider = 'lsp_client_names',
-  hl = {
-    fg = 'yellow',
-    style = 'bold'
-  },
-  right_sep = ' '
-}
+--[[ winbar_components.active[3][1] = { ]]
+--[[   provider = 'lsp_client_names', ]]
+--[[   hl = { ]]
+--[[     fg = 'yellow', ]]
+--[[     style = 'bold' ]]
+--[[   }, ]]
+--[[   right_sep = ' ' ]]
+--[[ } ]]
 -- diagnosticErrors
-winbar_components.active[3][2] = {
-  provider = 'diagnostic_errors',
-  enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.ERROR) end,
-  hl = {
-    fg = 'red',
-    style = 'bold'
-  }
-}
--- diagnosticWarn
-winbar_components.active[3][3] = {
-  provider = 'diagnostic_warnings',
-  enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.WARN) end,
-  hl = {
-    fg = 'yellow',
-    style = 'bold'
-  }
-}
--- diagnosticHint
-winbar_components.active[3][4] = {
-  provider = 'diagnostic_hints',
-  enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.HINT) end,
-  hl = {
-    fg = 'cyan',
-    style = 'bold'
-  }
-}
--- diagnosticInfo
-winbar_components.active[3][5] = {
-  provider = 'diagnostic_info',
-  enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.INFO) end,
-  hl = {
-    fg = 'skyblue',
-    style = 'bold'
-  }
-}
+--[[ winbar_components.active[3][2] = { ]]
+--[[   provider = 'diagnostic_errors', ]]
+--[[   enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.ERROR) end, ]]
+--[[   hl = { ]]
+--[[     fg = 'red', ]]
+--[[     style = 'bold' ]]
+--[[   } ]]
+--[[ } ]]
+--[[ -- diagnosticWarn ]]
+--[[ winbar_components.active[3][3] = { ]]
+--[[   provider = 'diagnostic_warnings', ]]
+--[[   enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.WARN) end, ]]
+--[[   hl = { ]]
+--[[     fg = 'yellow', ]]
+--[[     style = 'bold' ]]
+--[[   } ]]
+--[[ } ]]
+--[[ -- diagnosticHint ]]
+--[[ winbar_components.active[3][4] = { ]]
+--[[   provider = 'diagnostic_hints', ]]
+--[[   enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.HINT) end, ]]
+--[[   hl = { ]]
+--[[     fg = 'cyan', ]]
+--[[     style = 'bold' ]]
+--[[   } ]]
+--[[ } ]]
+--[[ -- diagnosticInfo ]]
+--[[ winbar_components.active[3][5] = { ]]
+--[[   provider = 'diagnostic_info', ]]
+--[[   enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.INFO) end, ]]
+--[[   hl = { ]]
+--[[     fg = 'skyblue', ]]
+--[[     style = 'bold' ]]
+--[[   } ]]
+--[[ } ]]
 
 -- INACTIVE
 
 -- fileType
-winbar_components.inactive[1][1] = {
-  provider = 'file_type',
-  hl = {
-    fg = 'black',
-    bg = 'cyan',
-    style = 'bold'
-  },
-  left_sep = {
-    str = ' ',
-    hl = {
-      fg = 'NONE',
-      bg = 'cyan'
-    }
-  },
-  right_sep = {
-    {
-      str = ' ',
-      hl = {
-        fg = 'NONE',
-        bg = 'cyan'
-      }
-    },
-    ' '
-  }
-}
-
-require('feline').setup({
-  theme = colors,
-  default_bg = bg,
-  default_fg = fg,
-  vi_mode_colors = vi_mode_colors,
-  components = components,
-  force_inactive = force_inactive,
-})
-
-require('feline').winbar.setup({
-  components = winbar_components,
-  force_inactive = force_inactive,
-})
+--[[ winbar_components.inactive[1][1] = { ]]
+--[[   provider = 'file_type', ]]
+--[[   hl = { ]]
+--[[     fg = 'black', ]]
+--[[     bg = 'cyan', ]]
+--[[     style = 'bold' ]]
+--[[   }, ]]
+--[[   left_sep = { ]]
+--[[     str = ' ', ]]
+--[[     hl = { ]]
+--[[       fg = 'NONE', ]]
+--[[       bg = 'cyan' ]]
+--[[     } ]]
+--[[   }, ]]
+--[[   right_sep = { ]]
+--[[     { ]]
+--[[       str = ' ', ]]
+--[[       hl = { ]]
+--[[         fg = 'NONE', ]]
+--[[         bg = 'cyan' ]]
+--[[       } ]]
+--[[     }, ]]
+--[[     ' ' ]]
+--[[   } ]]
+--[[ } ]]
+--[[]]
+--[[ require('feline').setup({ ]]
+--[[   theme = colors, ]]
+--[[   default_bg = bg, ]]
+--[[   default_fg = fg, ]]
+--[[   vi_mode_colors = vi_mode_colors, ]]
+--[[   components = components, ]]
+--[[   force_inactive = force_inactive, ]]
+--[[ }) ]]
+--[[]]
+--[[ require('feline').winbar.setup({ ]]
+--[[   components = winbar_components, ]]
+--[[   force_inactive = force_inactive, ]]
+--[[ }) ]]
 
